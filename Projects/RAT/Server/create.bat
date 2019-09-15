@@ -1,0 +1,1 @@
+"C:\Program Files\Python35-32\Scripts\pyinstaller-script.py" -F --hidden-import=win32crypt --icon=ici_AIy_icon.ico Server.py
