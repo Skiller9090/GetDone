@@ -8,20 +8,18 @@ while True:
     command_base_with_args = command.split(" ")
     if command_base_with_args[0].lower() == "create":
         if command_base_with_args[1].lower() == "base_account":
-            to_add = base_account_create()
-            accounts.update(to_add)
+            number = base_account_create()
+            print("[+] Created Account")
+            print("[£] Account Number: "+str(number))
     elif command_base_with_args[0] == "get_info":
-        account_obj = accounts[int(command_base_with_args[1])]
-        acc_num,cards,bal = get_all_info(account_obj)
-        print("Account Number:",end=" ")
-        print(acc_num)
-        print("Account Cards:",end=" ")
-        print(cards)
-        print("Account Balance: £",end="")
-        print(bal)
+        account_num = int(command_base_with_args[1])
+        info = get_all_info(account_num)
+        print("SQL ID: {}\nAccount Number: {}\nCards: {}\nAccount Balance: {}".format(str(info[0][0]),str(info[0][1]),str(info[0][2])+" ",str(info[0][3])))
     elif command_base_with_args[0] == "list_accounts":
-        for i in accounts:
-            print(i)
+        conn, cursor = create_connection("./accounts.db")
+        for i in get_all_accounts(conn,cursor):
+            print("[*] Account Number: "+str(i[1]))
+        conn.close()
     elif command_base_with_args[0] == "exit":
         exit()
     else:
