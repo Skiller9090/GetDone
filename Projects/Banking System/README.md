@@ -29,16 +29,19 @@ def Main():
 
   while True:
     if command == "Create Account": 
-      CreateAccount()
+      CreateAccount.CreateAccount()
 
     if command == "Close Account": 
-      CloseAccount()
+      CloseAccount.CloseAccount()
 
     if command == "Transfer": 
-      Transfer()
+      Transfer.Transfer()
+      
+    if command == "Withdraw":
+      Withdraw.Withdraw()
 
     if command == "Exit": 
-      Exit()  
+      Exit.Exit()  
   
 
 if __name__ == "__main__":
