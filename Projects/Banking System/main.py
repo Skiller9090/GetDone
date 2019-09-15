@@ -1,4 +1,4 @@
-import Account
+from Account import *
 
 
 
