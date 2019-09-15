@@ -3,7 +3,7 @@ Banking Management System
 TODO: Design its architecture
 
 
-## Built-in variables ,function , classes
+# Built-in variables ,function , classes:
 
 ran_16_card_num() = Function which makes a random credit card number (16 digits) with the 16th digit being a check digit which uses a wieghted sum MOD 10 to create it.
 
