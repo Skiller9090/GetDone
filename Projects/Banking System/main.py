@@ -1,3 +1,6 @@
+
+import CreateAccount
+
 import random
 
 
@@ -22,12 +25,18 @@ class Base_Account():
         self.account_number = num
         self.account_cards = cards
         self.account_balance = bal
-def Simple_Account(Base_Account):
-    def __init__(self):
-        super().__init__()
-        self.loans = []
-        def load(num,cards,bal,loans):
-        self.account_number = num
-        self.account_cards = cards
-        self.account_balance = bal
-        self.loans = loans
+
+def Main():
+    
+    command = ""
+    
+    
+    while command != "quit":
+        if command == "Create Account":
+            CreateAccount()
+        
+    
+    
+    
+if __name__ == "__main__":
+    Main()
