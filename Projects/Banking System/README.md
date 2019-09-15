@@ -1,13 +1,19 @@
-Banking Management System
-
-TODO: Design its architecture
+# Banking Management System
 
 
 ## Architecture
 
-Every one of us shall choose a functionality each of us will program. 
+The program shall have a menu listing all of its user-available functionality --- i.e., 
+- Create Account, 
+- Close Account, 
+- Withdraw, 
+- Tranfer, 
+- Exit 
+- etc. 
 
-The program shall have a menu listing all of its user-available functionality --- i.e., Create Account, Close Account, Withdraw, Tranfer, Exit etc. Main.py will simply call such functions --- the implementation of such features entirely rely on every one of us. Here's an example of how Main.py works together with the files we shall implement:
+All files work around a **core system**: if one wants to transfer or withdraw, for example, they will need to call the **built-in variable** `Balance` and change it. Such built-in functionality serve as constants to which all the different files can refer and work their algorithms upon. Main.py --- the core system --- will simply call such functions.
+
+Below is an example of the how Main.py relates to all other files which every one can implement their own.
 
 ```python
 import CreateAccount
@@ -30,11 +36,11 @@ if command == "Exit":
 ```
 
 
-All such features work around a **core system**: if one wants to transfer or withdraw, for example, they will need to call the **built-in variable** `Balance` and change it. Such built-in functionality serve as constants to which all the different files can refer and work their algorithms upon.
+
 
 ## Built-in features : variables, functions, classes
 
-Here we have all the built-in variables and functions. This consists of the bare essentials for a Banking Management System --- e.g, Account Balance, ...
+Here we have all the built-in functionality which you can use in order to create your own file to be called by Main.py.
 
 
 - `ran_16_card_num()` = Function which makes a random credit card number (16 digits) with the 16th digit being a check digit which uses a weighted sum MOD 10 to create it.
@@ -45,8 +51,8 @@ Here we have all the built-in variables and functions. This consists of the bare
 
 ## Ideas
 
-- **Parser for commands.**  (each a_k represents an account number)
-  - Merge(a1, a2, ...)
-  - Delete(a1, a2, ...)
-  - CheckBalance(a)
+- **Parser for command-line commands.**  (each a_k represents an account number)
+  - `Merge(a1, a2, ...)` : Merges all accounts `a1, a2, ...` together --- i.e., unify all accounts by having only one Card Number, only one Balance consisting of their sum etc.
+  - `Delete(a1, a2, ...)` : deletes all accounts `a1, a2, ...`
+  - `CheckBalance(a)` : Checks the balance for the account `a`.
 
