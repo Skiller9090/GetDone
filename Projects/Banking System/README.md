@@ -34,11 +34,10 @@ if command == "Exit":
 
 All such features shall work around a **core system**. If one wants to transfer or withdraw, for example, they will need to call **built-in variables** in order to accomplish so. For example, transfering money will use the built-in variable `Balance`.
 
-## Built-in features
+## Built-in features : variables, functions, classes
 
 Here we have all the built-in variables and functions. This consists of the bare essentials for a Banking Management System --- e.g, Account Balance, ...
 
-## Built-in variables ,function , classes
 
 ran_16_card_num() = Function which makes a random credit card number (16 digits) with the 16th digit being a check digit which uses a wieghted sum MOD 10 to create it.
 
