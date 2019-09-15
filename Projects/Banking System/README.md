@@ -13,7 +13,7 @@ The program shall have a menu listing all of its user-available functionality --
 
 All files work around a **core system**: if one wants to transfer or withdraw, for example, they will need to call the **built-in variable** `Balance` and change it. Such built-in functionality serve as constants to which all the different files can refer and work their algorithms upon. Main.py --- the core system --- will simply call such functions.
 
-Below is an example of the how Main.py relates to all other files which every one can implement their own.
+Below is an example of the how Main.py relates to all other files of which every one of us can implement their own.
 
 ```python
 import CreateAccount
@@ -54,7 +54,7 @@ if __name__ == "__main__":
 
 ## Built-in features : variables, functions, classes
 
-Here we is a list of all the built-in functionality which you can use in order to create your own file to be called by Main.py.
+Here we list all the built-in functionality which one can use in order to create their own file to be called by Main.py.
 
 
 - `ran_16_card_num()` : Function which makes a random credit card number (16 digits) with the 16th digit being a check digit which uses a weighted sum MOD 10 to create it.
