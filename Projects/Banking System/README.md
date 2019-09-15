@@ -11,7 +11,7 @@ The program shall have a menu listing all of its user-available functionality --
 
 Main.py must call such functions, e.g., 
 
-```
+```python
 import CreateAccount
 import CloseAccount
 import Transfer
