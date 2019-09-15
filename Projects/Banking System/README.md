@@ -22,17 +22,28 @@ import Transfer
 import Exit
 import Withdraw
 
-if command == "Create Account": 
-  CreateAccount()
-  
-if command == "Close Account": 
-  CloseAccount()
-  
-if command == "Transfer": 
-  Transfer()
 
-if command == "Exit": 
-  Exit()
+def Main():
+
+  command = ""
+
+  while True:
+    if command == "Create Account": 
+      CreateAccount()
+
+    if command == "Close Account": 
+      CloseAccount()
+
+    if command == "Transfer": 
+      Transfer()
+
+    if command == "Exit": 
+      Exit()  
+  
+
+if __name__ == "__main__":
+  Main()
+  
 ```
 
 
