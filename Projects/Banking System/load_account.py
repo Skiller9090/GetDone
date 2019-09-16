@@ -12,6 +12,8 @@ def loadDAccount(num, cards, bal, loans):
     newDAccount.load(num, cards, bal, loans)
     return newDAccount
 
-def get_details(account_number):
+def get_details(account_number):                        
     conn, cursor = create_connection("./accounts.db") 
     data = get_account(conn, cursor, account_number)
+    conn.close()
+    return data

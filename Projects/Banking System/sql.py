@@ -45,3 +45,7 @@ WHERE account_number = ?"""
     acc_cards = "|".join(acc_cards)
     cursor.execute(sql,(acc_num,acc_cards,acc_bal,acc_num))
     conn.commit()
+def delete_account(conn, cursor, account_number):
+    sql = """DELETE * FROM accounts WHERE account_number = """ +str(account_number)    
+    cursor.execute(sql)  
+    conn.commit()
