@@ -30,11 +30,11 @@ def save_account(conn,cursor,acc_num,acc_cards,acc_bal):
 
 def get_all_accounts(conn,cursor):
     cursor.execute("SELECT * FROM accounts")
-    rows = cur.fetchall()
+    rows = cursor.fetchall()
     return rows
 def get_account(conn,cursor,account_number):
     cursor.execute("SELECT * FROM accounts WHERE account_number = "+str(account_number))
-    rows = cur.fetchall()
+    rows = cursor.fetchall()
     return rows
 def update_account(conn,cursor,acc_num,acc_cards,acc_bal):
     sql = """UPDATE accounts
