@@ -1,16 +1,4 @@
-from sql import *
-from Account import *
-from load_account import *
 from merge_account import *
-
-# getDataU = getData()
-
-# def getDataU(*args):
-#     accountDetails = []
-#     for acc_number in args:
-#         account_no = get_details(acc_number)
-#         accountDetails.append(account_no)
-#     return accountDetails
 
 def UpdateAccount(*args):
     account_details = getData(args)
