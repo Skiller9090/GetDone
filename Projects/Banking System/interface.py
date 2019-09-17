@@ -1,6 +1,7 @@
 from create_account import *
 from get_info import *
 from merge_account import *
+from delete_account import *
 accounts = {}
 command = ""
 
@@ -29,6 +30,15 @@ while True:
         mergeAccount(accounts)
         print("Accounts: %s had been merged\n New account number:%s\n" % (accounts, account_num))#god fucking knows how to format this
         # merge interface 
+
+        # delete interface 
+    elif command_base_with_args[0].lower == "delete":
+        accounts = []
+        for account_number in range(1, len(command_base_with_args)):
+            accounts.append(account_number)
+        delete_account(conn,cursor,accounts)
+        #delete interface
+
     elif command_base_with_args[0] == "exit":
         exit()
     else:
