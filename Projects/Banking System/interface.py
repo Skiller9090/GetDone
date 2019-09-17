@@ -28,7 +28,7 @@ while True:
             accounts.append(account_number)
         mergeAccount(accounts)
         print("Accounts: %s had been merged\n New account number:%s\n" % (accounts, account_num))#god fucking knows how to format this
-        # merge interface
+        # merge interface 
     elif command_base_with_args[0] == "exit":
         exit()
     else:
