@@ -29,6 +29,6 @@ def mergeAccount(*args):
     # use main account number (main account to be merged into)
     # + the $ in the accounts
     # TO DELETE: account that is merged from
-    return account_num, bal
+    return account_num
 
     # push mergedAccount into db, not sure how to do that again
