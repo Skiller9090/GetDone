@@ -1,5 +1,6 @@
 from create_account import *
 from get_info import *
+from merge_account import *
 accounts = {}
 command = ""
 
@@ -20,6 +21,14 @@ while True:
         for i in get_all_accounts(conn,cursor):
             print("[*] Account Number: "+str(i[1]))
         conn.close()
+        # merge interface
+    elif command_base_with_args[0].lower == "merge":
+        accounts = []
+        for account_number in range(1, len(command_base_with_args)):
+            accounts.append(account_number)
+        mergeAccount(accounts)
+        print("Accounts: %s had been merged\n New account number:%s\n" % (accounts, account_num))#god fucking knows how to format this
+        # merge interface
     elif command_base_with_args[0] == "exit":
         exit()
     else:
