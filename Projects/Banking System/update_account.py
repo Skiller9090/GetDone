@@ -1,10 +1,7 @@
 from merge_account import *
 
-def UpdateAccount(*args):
-    account_details = getData(args)
-    for account_no in account_details:
-        acc_num = account_no[1]
-        acc_cards = account_no[2]
-        acc_bal = account_no[3]
-    return acc_num, acc_cards, acc_bal
-    
+def UpdateAccounts(account_numbers, acc_cards, acc_bal):
+    conn, cursor = create_connection('./accounts.db')
+    for account_no in account_numbers:
+        update_account(conn, cursor, account_no, acc_cards, acc_bal)
+    conn.close()
