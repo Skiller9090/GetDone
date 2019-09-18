@@ -23,7 +23,7 @@ while True:
             print("[*] Account Number: "+str(i[1]))
         conn.close()
         # merge interface
-    elif command_base_with_args[0].lower == "merge":
+    elif command_base_with_args[0].lower() == "merge":
         accounts = []
         for account_number in range(1, len(command_base_with_args)):
             accounts.append(account_number)
@@ -32,7 +32,7 @@ while True:
         # merge interface 
 
         # delete interface 
-    elif command_base_with_args[0].lower == "delete":
+    elif command_base_with_args[0].lower() == "delete":
         accounts = []
         for account_number in range(1, len(command_base_with_args)):
             accounts.append(account_number)
