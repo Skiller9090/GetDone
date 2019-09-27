@@ -25,13 +25,12 @@ while True:
         # merge interface
     elif command_base_with_args[0].lower() == "merge":
         mergeAccount(command_base_with_args[1:])
-        print("Accounts: %s had been merged\n New account number:%s\n" % (accounts, account_num))#god fucking knows how to format this
+        print("Accounts: {} had been merged\n New account number:{}\n".format(accounts, account_num))#god fucking knows how to format this
         # merge interface 
 
         # delete interface 
     elif command_base_with_args[0].lower() == "delete":
         delete_account(conn,cursor,command_base_with_args[1:])
-        print
         #delete interface
 
     elif command_base_with_args[0] == "exit":

@@ -1,4 +1,4 @@
-from merge_account import *
+from sql import *
 
 def UpdateAccounts(account_numbers, acc_cards, acc_bal):
     conn, cursor = create_connection('./accounts.db')

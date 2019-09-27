@@ -1,12 +1,12 @@
 from Account import *
-from load_account import *
+from get_info import *
 from sql import *
 # *args passes it into a list
 
 def getData(*args):
     accounts = []
     for acc_number in args:
-        account = get_details(acc_number)
+        account = get_all_info(acc_number)
         accounts.append(account)
     return accounts
 #0 = ID, 1 = Account_number, 2 = card_number, 3=account balance

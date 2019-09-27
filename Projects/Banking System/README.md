@@ -70,3 +70,4 @@ Here we list all the built-in functionality which one can use in order to create
   - `Delete(a1, a2, ...)` : deletes all accounts `a1, a2, ...`
   - `CheckBalance(a)` : Checks the balance for the account `a`.
 - ...
+  - ID system for account types: Base_Account(), Debit_account(): idea maybe for encode/decode system, but also simple 'Identifier' + val + 1 can work in Account.py implementation. Encode/Decode sounds cooler, though
